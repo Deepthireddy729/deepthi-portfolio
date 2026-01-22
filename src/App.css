@@ -48,9 +48,10 @@ h4,
 }
 
 .container {
+  width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  margin: auto;
+  padding: 20px;
 }
 
 a {
@@ -231,6 +232,29 @@ body {
   position: relative;
 }
 
+
+/* Global Mobile Media Query as requested */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 22px !important;
+  }
+
+  h2 {
+    font-size: 18px !important;
+  }
+
+  p {
+    font-size: 14px !important;
+  }
+
+  .contact-card {
+    max-width: 100% !important;
+  }
+
+  .container {
+    padding: 10px !important;
+  }
+}
 
 /* Accessibility & Interaction fixes */
 @media (hover: none) {

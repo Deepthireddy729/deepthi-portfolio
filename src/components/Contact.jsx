@@ -102,14 +102,14 @@ const Contact = () => {
         <section id="contact" style={{ padding: '120px 0' }}>
             <div className="container" style={containerStyle}>
                 <h2 className="section-title">Get In Touch</h2>
-                <div style={gridStyle} className="contact-grid">
+                <div style={gridStyle} className="contact-grid contact-wrapper">
                     <div className="animate">
                         <h3 style={{ fontSize: 'clamp(1.8rem, 8vw, 2.5rem)', marginBottom: '1.5rem', fontFamily: 'Outfit', fontWeight: '800', color: 'var(--primary)', wordBreak: 'break-word' }}>Let's Work Together</h3>
                         <p style={{ color: 'var(--text-muted)', marginBottom: '3rem', fontSize: '1rem', lineHeight: '1.8' }}>
                             I'm open to full-time roles and collaborative projects. Reach out via the form or through my professional channels.
                         </p>
                         {contactInfo.map((info, i) => (
-                            <a key={i} href={info.link} target="_blank" rel="noopener noreferrer" style={infoItem} className="glass"
+                            <a key={i} href={info.link} target="_blank" rel="noopener noreferrer" style={infoItem} className="glass contact-card"
                                 onMouseOver={(e) => {
                                     e.currentTarget.style.borderColor = info.color;
                                     e.currentTarget.style.background = 'rgba(255,255,255,0.05)';

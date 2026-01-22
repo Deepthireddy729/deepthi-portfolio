@@ -104,8 +104,8 @@ const Contact = () => {
                 <h2 className="section-title">Get In Touch</h2>
                 <div style={gridStyle} className="contact-grid">
                     <div className="animate">
-                        <h3 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', fontFamily: 'Outfit', fontWeight: '800', color: 'var(--primary)' }}>Let's Work Together</h3>
-                        <p style={{ color: 'var(--text-muted)', marginBottom: '3rem', fontSize: '1.1rem', lineHeight: '1.8' }}>
+                        <h3 style={{ fontSize: 'clamp(1.8rem, 8vw, 2.5rem)', marginBottom: '1.5rem', fontFamily: 'Outfit', fontWeight: '800', color: 'var(--primary)', wordBreak: 'break-word' }}>Let's Work Together</h3>
+                        <p style={{ color: 'var(--text-muted)', marginBottom: '3rem', fontSize: '1rem', lineHeight: '1.8' }}>
                             I'm open to full-time roles and collaborative projects. Reach out via the form or through my professional channels.
                         </p>
                         {contactInfo.map((info, i) => (
@@ -119,27 +119,28 @@ const Contact = () => {
                                     e.currentTarget.style.background = 'rgba(255,255,255,0.02)';
                                 }}>
                                 <span style={{
-                                    width: '50px',
-                                    height: '50px',
+                                    width: 'clamp(40px, 10vw, 50px)',
+                                    height: 'clamp(40px, 10vw, 50px)',
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
                                     borderRadius: '12px',
                                     background: `${info.color}15`,
-                                    color: info.color
+                                    color: info.color,
+                                    flexShrink: 0
                                 }}>
                                     {info.icon}
                                 </span>
-                                <div>
-                                    <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px' }}>{info.label}</p>
-                                    <p style={{ fontSize: '1.1rem', color: 'var(--text-main)', fontWeight: '600' }}>{info.value}</p>
+                                <div style={{ minWidth: 0 }}>
+                                    <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px' }}>{info.label}</p>
+                                    <p style={{ fontSize: 'clamp(0.9rem, 4vw, 1.1rem)', color: 'var(--text-main)', fontWeight: '600', wordBreak: 'break-all' }}>{info.value}</p>
                                 </div>
                             </a>
                         ))}
                     </div>
 
-                    <div className="animate glass" style={{ padding: 'clamp(1.5rem, 5vw, 3rem)', borderRadius: '32px', position: 'relative' }}>
-                        <h3 style={{ fontSize: '1.8rem', marginBottom: '2rem', fontFamily: 'Outfit', fontWeight: '700', color: 'var(--primary)' }}>Send a Message</h3>
+                    <div className="animate glass" style={{ padding: 'clamp(1.2rem, 5vw, 3rem)', borderRadius: '32px', position: 'relative' }}>
+                        <h3 style={{ fontSize: 'clamp(1.5rem, 6vw, 1.8rem)', marginBottom: '2rem', fontFamily: 'Outfit', fontWeight: '700', color: 'var(--primary)' }}>Send a Message</h3>
                         <form onSubmit={handleSubmit}>
                             <input type="text" placeholder="Your Name" required style={inputStyle} onFocus={(e) => e.target.style.borderColor = 'var(--primary)'} onBlur={(e) => e.target.style.borderColor = 'var(--glass-border)'} />
                             <input type="email" placeholder="Your Email" required style={inputStyle} onFocus={(e) => e.target.style.borderColor = 'var(--primary)'} onBlur={(e) => e.target.style.borderColor = 'var(--glass-border)'} />

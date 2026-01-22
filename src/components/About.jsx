@@ -41,32 +41,32 @@ const About = () => {
                 <div style={containerStyles} className="about-grid">
                     {/* About Column */}
                     <div className="animate" style={cardContainer}>
-                        <h3 style={{ fontSize: '1.8rem', marginBottom: '2rem', fontFamily: 'Outfit', color: 'var(--primary)', textAlign: 'center' }}>About Me</h3>
+                        <h3 style={{ fontSize: 'clamp(1.5rem, 6vw, 1.8rem)', marginBottom: '2rem', fontFamily: 'Outfit', color: 'var(--primary)', textAlign: 'center' }}>About Me</h3>
 
                         <div style={itemStyle} className="glass">
                             <h4 style={{ color: 'var(--text-main)', fontSize: '1.1rem', marginBottom: '0.5rem', fontWeight: '700' }}>Who I Am</h4>
-                            <p style={{ fontSize: '1rem', color: 'var(--text-muted)', lineHeight: '1.6' }}>
+                            <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)', lineHeight: '1.6' }}>
                                 I am a <span style={highlight}>Computer Science Engineering student</span> at ICFAI Tech, passionate about building high-impact software solutions.
                             </p>
                         </div>
 
                         <div style={{ ...itemStyle, borderLeftColor: 'var(--secondary)' }} className="glass">
                             <h4 style={{ color: 'var(--text-main)', fontSize: '1.1rem', marginBottom: '0.5rem', fontWeight: '700' }}>My Journey</h4>
-                            <p style={{ fontSize: '1rem', color: 'var(--text-muted)', lineHeight: '1.6' }}>
+                            <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)', lineHeight: '1.6' }}>
                                 Mastered Python, Java, and JavaScript through diverse projects—from ML medical systems to full-scale e-commerce platforms.
                             </p>
                         </div>
 
                         <div style={{ ...itemStyle, borderLeftColor: 'var(--text-muted)', marginBottom: 0 }} className="glass">
                             <h4 style={{ color: 'var(--text-main)', fontSize: '1.1rem', marginBottom: '1rem', fontWeight: '700' }}>Key Metrics</h4>
-                            <div style={{ display: 'flex', gap: '2rem' }}>
+                            <div style={{ display: 'flex', gap: 'clamp(1rem, 5vw, 2rem)', flexWrap: 'wrap' }}>
                                 <div>
-                                    <h4 style={{ fontSize: '1.8rem', color: 'var(--primary)', fontFamily: 'Outfit', fontWeight: '800' }}>4+</h4>
-                                    <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: '700', textTransform: 'uppercase' }}>Projects</p>
+                                    <h4 style={{ fontSize: 'clamp(1.5rem, 6vw, 1.8rem)', color: 'var(--primary)', fontFamily: 'Outfit', fontWeight: '800' }}>4+</h4>
+                                    <p style={{ fontSize: '0.7rem', color: 'var(--text-muted)', fontWeight: '700', textTransform: 'uppercase' }}>Projects</p>
                                 </div>
                                 <div>
-                                    <h4 style={{ fontSize: '1.8rem', color: 'var(--secondary)', fontFamily: 'Outfit', fontWeight: '800' }}>5+</h4>
-                                    <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: '700', textTransform: 'uppercase' }}>Certs</p>
+                                    <h4 style={{ fontSize: 'clamp(1.5rem, 6vw, 1.8rem)', color: 'var(--secondary)', fontFamily: 'Outfit', fontWeight: '800' }}>5+</h4>
+                                    <p style={{ fontSize: '0.7rem', color: 'var(--text-muted)', fontWeight: '700', textTransform: 'uppercase' }}>Certs</p>
                                 </div>
                             </div>
                         </div>
@@ -74,7 +74,7 @@ const About = () => {
 
                     {/* Education Column */}
                     <div className="animate" style={cardContainer}>
-                        <h3 style={{ fontSize: '1.8rem', marginBottom: '2rem', fontFamily: 'Outfit', color: 'var(--primary)', textAlign: 'center' }}>Education</h3>
+                        <h3 style={{ fontSize: 'clamp(1.5rem, 6vw, 1.8rem)', marginBottom: '2rem', fontFamily: 'Outfit', color: 'var(--primary)', textAlign: 'center' }}>Education</h3>
 
                         <div style={itemStyle} className="glass">
                             <h4 style={{ color: 'var(--text-main)', fontSize: '1.1rem', marginBottom: '0.3rem', fontWeight: '700' }}>B.Tech in Computer Science</h4>

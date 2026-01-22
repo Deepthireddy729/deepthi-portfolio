@@ -19,6 +19,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 body {
@@ -26,7 +29,9 @@ body {
   background-color: var(--bg-darker);
   color: var(--text-main);
   line-height: 1.6;
+  width: 100%;
   overflow-x: hidden;
+  position: relative;
 }
 
 html {

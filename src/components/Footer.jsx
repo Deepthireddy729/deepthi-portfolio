@@ -20,9 +20,9 @@ const Footer = () => {
     const containerStyle = {
         display: 'flex',
         justifyContent: 'space-between',
-        alignItems: 'start', // Align to start for better flex control
+        alignItems: 'center',
         flexWrap: 'wrap',
-        gap: '4rem',
+        gap: 'clamp(2rem, 5vw, 4rem)',
     };
 
     const logoStyles = {

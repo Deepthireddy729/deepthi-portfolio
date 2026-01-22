@@ -67,13 +67,12 @@ const Hero = () => {
     };
 
     const titleStyles = {
-        fontSize: 'clamp(2.5rem, 15vw, 5rem)', // Scaled better for mobile
+        fontSize: 'clamp(2rem, 15vw, 5rem)', // Scaled better for mobile
         lineHeight: 1.1,
         marginBottom: '2rem',
         letterSpacing: isMobile ? '-1px' : '-2px',
         fontWeight: '900',
         fontFamily: 'Outfit',
-        width: '100%',
         wordBreak: 'break-word',
         overflowWrap: 'break-word'
     };

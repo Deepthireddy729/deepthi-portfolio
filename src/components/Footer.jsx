@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Footer = () => {
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth <= 768);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     const footerStyle = {
         padding: '6rem 0 3rem 0',
         borderTop: '1px solid var(--glass-border)',
@@ -123,8 +131,5 @@ const Footer = () => {
         </footer>
     );
 };
-
-// Simple hook-like logic for responsiveness in style
-const isMobile = typeof window !== 'undefined' ? window.innerWidth <= 768 : false;
 
 export default Footer;

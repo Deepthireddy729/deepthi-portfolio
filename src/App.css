@@ -222,6 +222,60 @@ section {
   .experience-timeline {
     padding-left: 1.2rem !important;
   }
+
+  /* Additional Mobile Fixes */
+  .nav-item {
+    font-size: 1.1rem !important;
+    padding: 1rem !important;
+  }
+
+  /* Ensure buttons are properly sized */
+  button {
+    min-height: 44px !important;
+    /* iOS touch target minimum */
+    padding: 0.75rem 1.5rem !important;
+  }
+
+  /* Fix any overflow issues */
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Hero section mobile fixes */
+  .hero-content {
+    text-align: center !important;
+    padding: 0 1rem !important;
+  }
+
+  /* Contact form mobile fixes */
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Skills progress bars mobile */
+  .skill-bar {
+    height: 6px !important;
+  }
+
+  /* Project cards mobile */
+  .project-card {
+    margin-bottom: 2rem !important;
+  }
+
+  /* Footer mobile fixes */
+  footer .container {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 2rem !important;
+  }
+
+  footer .social-links {
+    justify-content: center !important;
+  }
 }
 
 
@@ -253,6 +307,55 @@ body {
 
   .container {
     padding: 10px !important;
+  }
+}
+
+/* Very Small Mobile Devices (320px and below) */
+@media (max-width: 320px) {
+  html {
+    font-size: 75%;
+  }
+
+  .container {
+    padding: 0 0.5rem !important;
+  }
+
+  section {
+    padding: 40px 0 !important;
+  }
+
+  .section-title {
+    font-size: 1.4rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Extra small button fixes */
+  button {
+    font-size: 0.9rem !important;
+    padding: 0.6rem 1.2rem !important;
+  }
+
+  /* Navigation fixes */
+  .nav-item {
+    font-size: 1rem !important;
+    padding: 0.8rem !important;
+  }
+
+  /* Typography for very small screens */
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  h3 {
+    font-size: 1.1rem !important;
+  }
+
+  p {
+    font-size: 0.85rem !important;
   }
 }
 

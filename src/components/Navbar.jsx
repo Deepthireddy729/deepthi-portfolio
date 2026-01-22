@@ -77,12 +77,12 @@ const Navbar = () => {
     };
 
     // Reactive resize logic
-    const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth <= 868 : false);
+    const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth <= 768 : false);
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth <= 868);
-            if (window.innerWidth > 868) setIsOpen(false);
+            setIsMobile(window.innerWidth <= 768);
+            if (window.innerWidth > 768) setIsOpen(false);
         };
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);

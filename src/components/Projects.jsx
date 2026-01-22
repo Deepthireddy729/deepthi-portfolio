@@ -16,7 +16,7 @@ const Projects = () => {
         {
             title: "🤖 RAG Chatbot",
             shortTitle: "RAG",
-            description: "AI-powered chatbot using Retrieval-Augmented Generation. (Access Key: deepthi)",
+            description: "AI-powered chatbot using Retrieval-Augmented Generation. access key = deepthi",
             tech: ["Python", "NLP", "Machine Learning"],
             demoLink: "https://chatbot-nwe33q7j7-deepthireddy729s-projects.vercel.app/",
             codeLink: "https://github.com/Deepthireddy729/chatbot",

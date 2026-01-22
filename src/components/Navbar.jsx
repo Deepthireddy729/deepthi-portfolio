@@ -26,13 +26,6 @@ const Navbar = () => {
         boxShadow: scrolled ? '0 10px 30px -10px rgba(0,0,0,0.5)' : 'none'
     };
 
-    const containerStyles = {
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        position: 'relative'
-    };
-
     const logoStyles = {
         fontSize: '1.6rem',
         fontWeight: '900',
@@ -62,9 +55,6 @@ const Navbar = () => {
         padding: '2rem',
         gap: '2rem',
         textAlign: 'center',
-        transform: isOpen ? 'translateY(0)' : 'translateY(-150%)',
-        visibility: isOpen ? 'visible' : 'hidden',
-        opacity: isOpen ? 1 : 0,
         borderBottom: '1px solid var(--glass-border)'
     };
 
@@ -103,7 +93,7 @@ const Navbar = () => {
         justifyContent: 'space-between',
         alignItems: 'center',
         position: 'relative',
-        flexDirection: 'row', // Force row to prevent stacking from global container styles
+        flexDirection: 'row',
         width: '100%'
     };
 

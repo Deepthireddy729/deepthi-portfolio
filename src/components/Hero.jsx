@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Hero = () => {
-    const [text, setText] = React.useState('');
-    const [isDeleting, setIsDeleting] = React.useState(false);
-    const [loopNum, setLoopNum] = React.useState(0);
-    const [typingSpeed, setTypingSpeed] = React.useState(150);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+    const [text, setText] = useState('');
+    const [isDeleting, setIsDeleting] = useState(false);
+    const [loopNum, setLoopNum] = useState(0);
+    const [typingSpeed, setTypingSpeed] = useState(150);
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth <= 768);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const phrases = ["Full Stack Developer", "AI/ML Enthusiast"];
 
-    React.useEffect(() => {
+    useEffect(() => {
+
         const handleTyping = () => {
             const i = loopNum % phrases.length;
             const fullText = phrases[i];
@@ -59,12 +67,15 @@ const Hero = () => {
     };
 
     const titleStyles = {
-        fontSize: 'clamp(3.5rem, 12vw, 5.5rem)',
-        lineHeight: 0.9,
+        fontSize: 'clamp(2.5rem, 15vw, 5rem)', // Scaled better for mobile
+        lineHeight: 1.1,
         marginBottom: '2rem',
-        letterSpacing: '-3px',
+        letterSpacing: isMobile ? '-1px' : '-2px',
         fontWeight: '900',
-        fontFamily: 'Outfit'
+        fontFamily: 'Outfit',
+        width: '100%',
+        wordBreak: 'break-word',
+        overflowWrap: 'break-word'
     };
 
     const descStyles = {

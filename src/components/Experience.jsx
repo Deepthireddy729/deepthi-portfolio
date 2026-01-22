@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Experience = () => {
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth <= 768);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     const experiences = [
         {
             role: 'FullStack Development Intern',
@@ -22,13 +30,13 @@ const Experience = () => {
         maxWidth: '900px',
         margin: '0 auto',
         position: 'relative',
-        paddingLeft: '3rem',
-        paddingTop: '3rem'
+        paddingLeft: 'clamp(1.5rem, 5vw, 3rem)',
+        paddingTop: '2rem'
     };
 
     const lineStyles = {
         position: 'absolute',
-        left: '11px',
+        left: '9px',
         top: 0,
         bottom: 0,
         width: '2px',
@@ -40,27 +48,27 @@ const Experience = () => {
         <section id="experience" style={{ background: 'var(--bg-darker)' }}>
             <div className="container">
                 <h2 className="section-title">Professional Experience</h2>
-                <div style={timelineStyles}>
+                <div style={timelineStyles} className="experience-timeline">
                     <div style={lineStyles}></div>
                     {experiences.map((exp, i) => (
                         <div key={i} className="glass animate" style={{
                             position: 'relative',
-                            marginBottom: '4rem',
-                            padding: '2.5rem',
+                            marginBottom: '3rem',
+                            padding: 'clamp(1.2rem, 4vw, 2.5rem)',
                             borderRadius: '24px',
                             borderLeft: `6px solid ${exp.color}`
                         }}>
                             <div style={{
                                 position: 'absolute',
-                                left: '-3.7rem',
+                                left: isMobile ? '-1.05rem' : '-2.4rem', // Aligned with line
                                 top: '2.5rem',
-                                width: '24px',
-                                height: '24px',
+                                width: '18px',
+                                height: '18px',
                                 background: 'var(--bg-darker)',
-                                border: `4px solid ${exp.color}`,
+                                border: `3px solid ${exp.color}`,
                                 borderRadius: '50%',
                                 zIndex: 2,
-                                boxShadow: `0 0 15px ${exp.color}44`
+                                boxShadow: `0 0 10px ${exp.color}44`
                             }}></div>
 
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1.2rem', flexWrap: 'wrap', gap: '1rem' }}>

@@ -38,7 +38,7 @@ const About = () => {
         <section id="about" style={{ padding: '120px 0' }}>
             <div className="container">
                 <h2 className="section-title">The Story So Far</h2>
-                <div style={containerStyles}>
+                <div style={containerStyles} className="about-grid">
                     {/* About Column */}
                     <div className="animate" style={cardContainer}>
                         <h3 style={{ fontSize: '1.8rem', marginBottom: '2rem', fontFamily: 'Outfit', color: 'var(--primary)', textAlign: 'center' }}>About Me</h3>

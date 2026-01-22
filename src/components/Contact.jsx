@@ -102,7 +102,7 @@ const Contact = () => {
         <section id="contact" style={{ padding: '120px 0' }}>
             <div className="container" style={containerStyle}>
                 <h2 className="section-title">Get In Touch</h2>
-                <div style={gridStyle}>
+                <div style={gridStyle} className="contact-grid">
                     <div className="animate">
                         <h3 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', fontFamily: 'Outfit', fontWeight: '800', color: 'var(--primary)' }}>Let's Work Together</h3>
                         <p style={{ color: 'var(--text-muted)', marginBottom: '3rem', fontSize: '1.1rem', lineHeight: '1.8' }}>

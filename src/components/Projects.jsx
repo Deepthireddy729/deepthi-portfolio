@@ -134,7 +134,7 @@ const Projects = () => {
                     display: 'grid',
                     gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))',
                     gap: '2.5rem',
-                }}>
+                }} className="projects-grid">
                     {filteredProjects.map((project, index) => (
                         <div key={index} className="glass animate" style={{
                             overflow: "hidden",

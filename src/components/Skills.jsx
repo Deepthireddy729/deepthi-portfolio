@@ -81,7 +81,7 @@ const Skills = () => {
             <div className="container">
                 <h2 className="section-title">Technical Proficiency</h2>
 
-                <div style={gridStyles}>
+                <div style={gridStyles} className="skills-grid">
                     {technicalSkills.map((cat, idx) => (
                         <div key={idx} className="glass animate" style={cardStyles}>
                             <h3 style={{
